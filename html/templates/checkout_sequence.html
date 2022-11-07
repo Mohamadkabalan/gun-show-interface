@@ -1,0 +1,40 @@
+{% set title = "Checkout process / Checkout sequence" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body class="checkout-page">
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          {% include './blocks/checkout/navbar.html' %}
+
+          <div class="checkout__wrapper">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-lg-7 col-xl-8 order-2 order-lg-1">
+                  {% include './blocks/checkout/process.html' %}
+                </div>
+                <div class="col-12 col-lg-5 col-xl-4 order-1 order-lg-2">
+                  {% include './blocks/checkout/summary.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

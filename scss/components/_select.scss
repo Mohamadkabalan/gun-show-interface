@@ -1,0 +1,22 @@
+// styled select
+.styled-select {
+  appearance: none;
+
+  & + .select-icon-container {
+    position: relative;
+
+    .select-icon {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+
+      &.language-arrow-icon {
+        right: 0px;
+      }
+    }
+  }
+}

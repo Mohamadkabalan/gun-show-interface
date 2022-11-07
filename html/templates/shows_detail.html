@@ -1,0 +1,85 @@
+{% set title = "Shows / Gun show detail" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+          
+          {% include './blocks/shows/hero.html' with {
+            hero_bg_image: '../images/hero.jpg',
+            hero_title: 'Madisonville Noon Lion\'s Club Gun Show',
+            hero_label: TRUE,
+          } %}
+
+          <div class="shows-detail">
+            <div class="container">
+              <div class="shows-detail__info">
+                <i class="fal fa-exclamation-triangle"></i>
+                <p>Due to the COVID-19 out break we are encouraging all of our users to verify that the gun shows listed in this site have not been cancelled by contacting the promoter directly.</p>
+              </div>
+              <div class="shows-detail__description">
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-lg-3 shows-detail__description-item">
+                    <i class="far fa-calendar-alt"></i>
+                    <h5>Date</h5>
+                    <p>Aug 15 - Aug 16, 2020</p>
+                  </div>
+                  <div class="col-12 col-sm-6 col-lg-3 shows-detail__description-item">
+                    <i class="far fa-clock"></i>
+                    <h5>Time</h5>
+                    <p>Saturday: 9:00 AM to 4:00 PM</p>
+                  </div>
+                  <div class="col-12 col-sm-6 col-lg-3 shows-detail__description-item">
+                    <i class="fal fa-dollar-sign"></i>
+                    <h5>Admission</h5>
+                    <p>$5</p>
+                  </div>
+                  <div class="col-12 col-sm-6 col-lg-3 shows-detail__description-item">
+                    <i class="fal fa-map-marked-alt"></i>
+                    <h5>Location</h5>
+                    <p>Truman Kimbro Center <br> Madisonville,TX</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <p>The Madisonville Noon Lion's Club Gun & Hunting Show will be held on Aug 15 - Aug 16, 2020 in Madisonville, TX. This Madisonville gun show is held at Truman Kimbro Center and hosted by PROMOTER. All federal, state and local firearm ordinances and laws must be obeyed.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <h5>Promoter</h5>
+                  <p>Madisonville Noon Lions Club</p>
+                  <a href="#" class="btn btn-outline-gray btn-sm">More about this promoter</a>
+                </div>
+              </div>
+              <div class="shows-detail__map">
+                <img src="../images/shows-map.jpg" alt="Show map">
+              </div>
+              <h5>Please Confirm All Gun Shows</h5>
+              <p>Shows are liable to change dates, times or possibly cancel without notice to 2A Gun Show. Make sure to check with the Gun Show Coordinator for accurate dates, times and information.</p>
+            </div>
+          </div>
+
+          {% include './blocks/shows/more-shows.html' %}
+
+          {% include './blocks/home/subscribe.html' %}
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

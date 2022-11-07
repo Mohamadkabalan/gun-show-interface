@@ -1,0 +1,145 @@
+{% set title = "Marketplace / Dashboard" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <div class="account-head">
+                <h1 class="h3">Dashboard</h1>
+                <div class="account-action">
+                  <div class="form-group form-date">
+                    <input type="text" class="form-control" placeholder="05-18-2020">
+                    <i class="far fa-calendar-alt"></i>
+                  </div>
+                  <div class="form-group form-date">
+                    <input type="text" class="form-control" placeholder="05-18-2020">
+                    <i class="far fa-calendar-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="dashboard-box dashboard-box--number">
+                    <div class="title">Average Order Sale</div>
+                    <div class="data">
+                      <span class="sum">$99999.99</span>
+                      <span class="stat text-success"><i class="far fa-arrow-up"></i> 0.0%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="dashboard-box dashboard-box--number">
+                    <div class="title">Average Order Sale</div>
+                    <div class="data">
+                      <span class="sum">$99999.99</span>
+                      <span class="stat text-success"><i class="far fa-arrow-up"></i> 0.0%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="dashboard-box dashboard-box--number">
+                    <div class="title">Average Order Sale</div>
+                    <div class="data">
+                      <span class="sum">$99999.99</span>
+                      <span class="stat text-success"><i class="far fa-arrow-up"></i> 0.0%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="dashboard-box dashboard-box--empty">
+                    <div class="title">Average Order Sale</div>
+                    <div class="text-center">
+                      <i class="fal fa-exclamation-triangle"></i>
+                      <span class="h4">We could not find any records.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="dashboard-box dashboard-box--empty">
+                    <div class="title">Average Order Sale</div>
+                    <div class="text-center">
+                      <i class="fal fa-exclamation-triangle"></i>
+                      <span class="h4">We could not find any records.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="dashboard-box dashboard-box--stock">
+                    <div class="title">Stock threshold</div>
+                    <div class="inner">
+                      <ul>
+                        <li>
+                          <img src="../images/list-item.jpg" alt="List item image">
+                          <div class="wrap">
+                            <p>22 LR 10+1 Rounds 5 Barrel <br> 2.2 Lbs. N</p>
+                            <b>24 left</b>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="../images/list-item.jpg" alt="List item image">
+                          <div class="wrap">
+                            <p>22 LR 10+1 Rounds 5 Barrel <br> 2.2 Lbs. N</p>
+                            <b>24 left</b>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="../images/list-item.jpg" alt="List item image">
+                          <div class="wrap">
+                            <p>22 LR 10+1 Rounds 5 Barrel <br> 2.2 Lbs. N</p>
+                            <b>24 left</b>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="../images/list-item.jpg" alt="List item image">
+                          <div class="wrap">
+                            <p>22 LR 10+1 Rounds 5 Barrel <br> 2.2 Lbs. N</p>
+                            <b>24 left</b>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="../images/list-item.jpg" alt="List item image">
+                          <div class="wrap">
+                            <p>22 LR 10+1 Rounds 5 Barrel <br> 2.2 Lbs. N</p>
+                            <b>24 left</b>
+                          </div>
+                        </li>
+                        <li>
+                          <img src="../images/list-item.jpg" alt="List item image">
+                          <div class="wrap">
+                            <p>22 LR 10+1 Rounds 5 Barrel <br> 2.2 Lbs. N</p>
+                            <b>24 left</b>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

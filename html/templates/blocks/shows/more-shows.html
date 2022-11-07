@@ -1,0 +1,19 @@
+<!-- SHOWS LIST SECTION -->
+<div class="shows-list shows-list--more">
+  <div class="container">
+    <div class="shows-list__head">
+      <h2>More shows from this promoter</h2>
+    </div>
+    <div class="shows-list__items row">
+      {% for i in 1..6 %}
+        {% if i == 2 or i == 3 or i == 5 or i == 6 %}
+          {% set label = TRUE %}
+        {% endif %}
+        <div class="shows-list__item col-12 col-md-6 col-lg-4">
+          {% include 'shows-item.html' with {label : label} only %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- END SHOWS LIST SECTION -->

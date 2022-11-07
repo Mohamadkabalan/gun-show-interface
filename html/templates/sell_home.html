@@ -1,0 +1,53 @@
+{% set title = "Sell / Homepage" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="promo-section promo-section--dark">
+            <div class="container text-center h-100">
+              <div class="row h-100 justify-content-center">
+                <div class="col-12 col-lg-9 col-xl-8">
+                  <h2 class="promo-section__title">Millions of shoppers can't wait to see what you have in store</h2>
+                  <a href="#" class="btn btn-primary">Open your shop now!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% include './blocks/sell/features.html' %}
+
+          <div class="promo-section promo-section--light">
+            <div class="container text-center h-100">
+              <div class="row h-100 justify-content-center">
+                <div class="col-12 col-lg-8 col-xl-7">
+                  <h2 class="promo-section__title">Simple, transparent, secure.</h2>
+                  <p class="h2">Description of the advantages of using 2Agunshow.com for selling guns</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% include './blocks/home/subscribe.html' %}
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

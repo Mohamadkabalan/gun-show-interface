@@ -1,0 +1,26 @@
+{% set promo_bg_image = promo_bg_image|default("./images/...jpg") %}
+{% set promo_title = promo_title|default("Promo section title") %}
+{% set promo_link = promo_link|default("Button") %}
+{% set promo_specific = promo_specific|default(false) %}
+{% set promo_revert = promo_revert|default(false) %}
+
+<!-- PROMO SECTION -->
+<div class="promo-section" style="background-image: url({{ promo_bg_image }});">
+  <div class="container">
+    {% if promo_revert %}
+      <div class="row justify-content-end">
+    {% else %}
+      <div class="row">
+    {% endif %}
+      {% if promo_specific %}
+        <div class="col col-lg-7">
+      {% else %}
+        <div class="col">
+      {% endif %}
+        <h2 class="h1 promo-section__title">{{ promo_title }}</h2>
+        <a href="#" class="btn btn-primary promo-section__link">{{ promo_link }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END PROMO SECTION -->

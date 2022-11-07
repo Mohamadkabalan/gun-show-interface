@@ -1,0 +1,109 @@
+{% set title = "Checkout process / Confirmation" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <section class="order-confirmation">
+            <div class="container">
+              <div class="order-confirmation__head">
+                <h1 class="h2">Thank you for ordering from <span class="bg-dark text-primary">2aGunShow.com</span></h1>
+                <div class="h3">Your order <span class="bg-dark text-primary"># 21273</span> has been placed. We have sent an email to tanacea@gmail.com with your receipt and instructions on picking up your gun.</div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-8 col-lg-9">
+                  <div class="order-confirmation__content clearfix">
+                    <h3>Order Details</h3>
+                    <div class="row justify-content-lg-between">
+                      <div class="col-12 col-md-4 col-xl-3">
+                        <p><b>Customer</b></p>
+                        <p>Gregory Tanacea 6500 400th ave Burlington, WI 53105 563-580-4493</p>
+                      </div>
+                      <div class="col-12 col-md-4 col-xl-3">
+                        <p><b>Pickup location</b></p>
+                        <p>Gander Outdoors 6802 118th ave Kenosha, WI 53142</p>
+                      </div>
+                      <div class="col-12 col-md-4 col-xl-3">
+                        <p><b>Payment method</b></p>
+                        <p>Card ending in **** 4567</p>
+                      </div>
+                    </div>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Order #</th>
+                          <th>QTY</th>
+                          <th>Product</th>
+                          <th class="text-right">Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="font-weight-bold">123456</td>
+                          <td class="font-weight-bold text-center">1</td>
+                          <td>
+                            <img src="../images/list-item.jpg" alt="Product image">
+                            <div>
+                              <p>22 LR 10+1 ROUNDS 5 BARREL 2.2 LBS. N <br> UPC: 1234567890</p>
+                            </div>
+                          </td>
+                          <td class="text-right font-weight-bold">$989.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="order-confirmation__total">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <span>Subtotal</span>
+                          <span>989.00</span>
+                        </li>
+                        <li class="list-group-item">
+                          <span>Shipping</span>
+                          <span>FREE</span>
+                        </li>
+                        <li class="list-group-item">
+                          <span>Tax</span>
+                          <span>$0.00</span>
+                        </li>
+                        <li class="list-group-item">
+                          <span>Firearm Processing</span>
+                          <span>$10.00</span>
+                        </li>
+                        <li class="list-group-item">
+                          <span>TOTAL</span>
+                          <span>$999.00</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                  <div class="dummy-content">
+                    <h3>Marketing area</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

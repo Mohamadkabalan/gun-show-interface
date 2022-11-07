@@ -1,0 +1,80 @@
+{% set title = "User Account / Profile Edit" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <form action="user-account_profile.html">
+                <div class="account-head">
+                  <h1 class="h3">Account profile</h1>
+                </div>
+                <div class="account-table-content">
+                  <div class="form-group row">
+                    <div class="col-12 col-md-4">
+                      <label>First name</label>
+                      <input class="form-control" type="text" placeholder="First name" value="Greg">
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <label>Last name</label>
+                      <input class="form-control" type="text" placeholder="Last name" value="Tanacea">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-12 col-md-4">
+                      <div class="form-label">Gender</div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" name="form-radio-1" id="profileGender1" value="Male" checked="checked">
+                        <label class="form-check-label" for="profileGender1">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" name="form-radio-1" id="profileGender2" value="Female">
+                        <label class="form-check-label" for="profileGender2">Female</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <div class="form-date">
+                        <label>Date of birth</label>
+                        <input class="form-control" type="text" value="10 - 08 - 1980">
+                        <i class="far fa-calendar-alt"></i>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <label>Email</label>
+                      <input class="form-control" type="email" placeholder="Email" value="greg@devvly.com">
+                    </div>
+                  </div>
+                  <div class="form-action d-flex justify-content-between">
+                    <button type="submit" class="btn btn-outline-primary"><i class="far fa-save"></i><span>Save</span></button>
+                    <a href="#" class="btn btn-outline-gray"><i class="far fa-trash-alt"></i><span>Delete account</span></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

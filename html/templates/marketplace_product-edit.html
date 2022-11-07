@@ -1,0 +1,339 @@
+{% set title = "Marketplace / Product Edit" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <form action="/">
+                <div class="account-head">
+                  <h1 class="h3">Create new product</h1>
+                  <div class="account-action">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+                <div class="account-table-content">
+                  <!-- PRODUCT EDIT LIST -->
+                  <div class="accordion list-group list-group-flush list-group-accordion" id="marketplace-product-edit">
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProductEdit1" aria-expanded="false" aria-controls="collapseProductEdit1"><span>General</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProductEdit1" class="collapse" data-parent="#marketplace-product-edit">
+                        <div class="inner">
+                          <div class="form-group row">
+                            <div class="col-12 col-md-6">
+                              <label>SKU</label>
+                              <input class="form-control" type="text" placeholder="SKU">
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <label>Name</label>
+                              <input class="form-control" type="text" placeholder="Name">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12 col-md-6">
+                              <label>Url key</label>
+                              <input class="form-control" type="text" placeholder="Url key">
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <label>Tax category (default)</label>
+                              <select placeholder="Tax category (default)" class="form-control">
+                                <option value="Category 1">Category 1</option>
+                                <option value="Category 2">Category 2</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="form-toggle form-group col">
+                              <input type="checkbox" id="form-toggle-1">
+                              <label for="form-toggle-1">New</label>
+                            </div>
+                            <div class="form-toggle form-group col">
+                              <input type="checkbox" id="form-toggle-2">
+                              <label for="form-toggle-2">Featured</label>
+                            </div>
+                            <div class="form-toggle form-group col">
+                              <input type="checkbox" id="form-toggle-3" checked="checked">
+                              <label for="form-toggle-3">Visible individually</label>
+                            </div>
+                            <div class="form-toggle form-group col">
+                              <input type="checkbox" id="form-toggle-4">
+                              <label for="form-toggle-4">Status</label>
+                            </div>
+                            <div class="form-toggle form-group col">
+                              <input type="checkbox" id="form-toggle-5">
+                              <label for="form-toggle-5">Guest checkout</label>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12 col-md-4">
+                              <label>Color</label>
+                              <select placeholder="Select color" class="form-control">
+                                <option value="Color 1">Color 1</option>
+                                <option value="Color 2">Color 2</option>
+                              </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>Size</label>
+                              <select placeholder="Select size" class="form-control">
+                                <option value="Size 1">Size 1</option>
+                                <option value="Size 2">Size 2</option>
+                              </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>Brand</label>
+                              <select placeholder="Select Brand" class="form-control">
+                                <option value="Brand 1">Brand 1</option>
+                                <option value="Brand 2">Brand 2</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label>Address 1</label>
+                            <input class="form-control" type="text" placeholder="Address line 1">
+                          </div>
+                          <div class="form-group">
+                            <label>Address 2</label>
+                            <input class="form-control" type="text" placeholder="Address line 2">
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12 col-md-4">
+                              <label>City</label>
+                              <input class="form-control" type="text" placeholder="City">
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>State</label>
+                              <select placeholder="Select state" class="form-control">
+                                <option value="State 1">State 1</option>
+                                <option value="State 2">State 2</option>
+                              </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>Zip/Postcode</label>
+                              <input class="form-control" type="text" placeholder="Zip/Postcode">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProductEdit2" aria-expanded="false" aria-controls="collapseProductEdit2"><span>Description</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProductEdit2" class="collapse" data-parent="#marketplace-product-edit">
+                        <div class="inner">
+                          <div class="form-group">
+                            <label>Short description</label>
+                            <textarea class="form-control" placeholder="Short description"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label>Long description</label>
+                            <textarea class="form-control" placeholder="Long description"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProductEdit3" aria-expanded="false" aria-controls="collapseProductEdit3"><span>Meta description</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProductEdit3" class="collapse" data-parent="#marketplace-product-edit">
+                        <div class="inner">
+                          <div class="form-group">
+                            <label>Meta title</label>
+                            <textarea class="form-control" placeholder="Meta title"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label>Meta keywords</label>
+                            <textarea class="form-control" placeholder="Meta keywords"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label>Meta description</label>
+                            <textarea class="form-control" placeholder="Meta description"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProductEdit4" aria-expanded="false" aria-controls="collapseProductEdit4"><span>Price</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProductEdit4" class="collapse" data-parent="#marketplace-product-edit">
+                        <div class="inner">
+                          <div class="form-group row">
+                            <div class="col-12 col-md-4">
+                              <label>Price</label>
+                              <input class="form-control" type="text" placeholder="$ 0.00">
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>Cost</label>
+                              <input class="form-control" type="text" placeholder="$ 0.00">
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>Special price</label>
+                              <input class="form-control" type="text" placeholder="$ 0.00">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12 col-md-4">
+                              <label>Special price from</label>
+                              <input class="form-control" type="text" placeholder="$ 0.00">
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>Special price to</label>
+                              <input class="form-control" type="text" placeholder="$ 0.00">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProductEdit5" aria-expanded="false" aria-controls="collapseProductEdit5"><span>Shipping</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProductEdit5" class="collapse" data-parent="#marketplace-product-edit">
+                        <div class="inner">
+                          <div class="form-group row">
+                            <div class="col-12 col-md-3">
+                              <label>Width</label>
+                              <input class="form-control" type="text" placeholder="0">
+                            </div>
+                            <div class="col-12 col-md-3">
+                              <label>Height</label>
+                              <input class="form-control" type="text" placeholder="0">
+                            </div>
+                            <div class="col-12 col-md-3">
+                              <label>Depth</label>
+                              <input class="form-control" type="text" placeholder="0">
+                            </div>
+                            <div class="col-12 col-md-3">
+                              <label>Weight</label>
+                              <input class="form-control" type="text" placeholder="0">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProductEdit6" aria-expanded="false" aria-controls="collapseProductEdit6"><span>Inventories</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProductEdit6" class="collapse" data-parent="#marketplace-product-edit">
+                        <div class="inner">
+                          <div class="form-group">
+                            <label>Default</label>
+                            <input class="form-control" type="text" placeholder="0">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProductEdit7" aria-expanded="false" aria-controls="collapseProductEdit7"><span>Images</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProductEdit7" class="collapse" data-parent="#marketplace-product-edit">
+                        <div class="inner">
+                          <div class="form-group row align-items-stretch">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                              <a href="#" class="form-file-remove" data-toggle="modal" data-target="#imageDelete">
+                                <img src="../images/add-product-thumb-1.jpg" alt="Product thumb" class="img-fluid">
+                                <span>
+                                  <i class="far fa-trash-alt"></i>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                              <a href="#" class="form-file-remove" data-toggle="modal" data-target="#imageDelete">
+                                <img src="../images/add-product-thumb-2.jpg" alt="Product thumb" class="img-fluid">
+                                <span>
+                                  <i class="far fa-trash-alt"></i>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                              <a href="#" class="form-file-remove" data-toggle="modal" data-target="#imageDelete">
+                                <img src="../images/add-product-thumb-3.jpg" alt="Product thumb" class="img-fluid">
+                                <span>
+                                  <i class="far fa-trash-alt"></i>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="form-drag-file form-drag-file--image col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                              <input type="file" id="form-input-file-1">
+                              <label for="form-input-file-1">
+                                <i class="far fa-arrow-to-top"></i>
+                                <span>Change the image</span>
+                                <small>or drag it here</small>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProductEdit8" aria-expanded="false" aria-controls="collapseProductEdit8"><span>Categories</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProductEdit8" class="collapse" data-parent="#marketplace-product-edit">
+                        <div class="inner">
+                          <ol class="list-unstyled">
+                            <li class="form-group form-check">
+                              <input type="checkbox" class="form-check-input" id="filter-check-1" checked="checked">
+                              <label class="form-check-label" for="filter-check-1">Root</label>
+                              <ol class="list-unstyled">
+                                <li class="form-group form-check">
+                                  <input type="checkbox" class="form-check-input" id="filter-check-11" checked="checked">
+                                  <label class="form-check-label" for="filter-check-11">Category one</label>
+                                  <ol class="list-unstyled">
+                                    <li class="form-group form-check">
+                                      <input type="checkbox" class="form-check-input" id="filter-check-111" checked="checked">
+                                      <label class="form-check-label" for="filter-check-111">Subcategory one</label>
+                                    </li>
+                                    <li class="form-group form-check">
+                                      <input type="checkbox" class="form-check-input" id="filter-check-112">
+                                      <label class="form-check-label" for="filter-check-112">Subcategory two</label>
+                                    </li>
+                                    <li class="form-group form-check">
+                                      <input type="checkbox" class="form-check-input" id="filter-check-113">
+                                      <label class="form-check-label" for="filter-check-113">Subcategory three</label>
+                                    </li>
+                                  </ol>
+                                </li>
+                                <li class="form-group form-check">
+                                  <input type="checkbox" class="form-check-input" id="filter-check-12">
+                                  <label class="form-check-label" for="filter-check-12">Category two</label>
+                                  <ol class="list-unstyled">
+                                    <li class="form-group form-check">
+                                      <input type="checkbox" class="form-check-input" id="filter-check-121">
+                                      <label class="form-check-label" for="filter-check-121">Subcategory four</label>
+                                    </li>
+                                    <li class="form-group form-check">
+                                      <input type="checkbox" class="form-check-input" id="filter-check-122">
+                                      <label class="form-check-label" for="filter-check-122">Subcategory five</label>
+                                    </li>
+                                  </ol>
+                                </li>
+                              </ol>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END PRODUCT EDIT LIST -->
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

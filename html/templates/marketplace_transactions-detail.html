@@ -1,0 +1,121 @@
+{% set title = "Marketplace / Transactions Detail" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <div class="account-head">
+                <a href="marketplace_transactions.html" class="h3">Transactions /</a>
+                <h1 class="h3 ml-1">Transaction #31</h1>
+                <span class="ml-1">Placed On 26 Feb 2020</span>
+              </div>
+              <div class="row stats">
+                <div class="col-6 col-lg-3">
+                  <p>Created at</p>
+                  <p><b>03-25-2020</b></p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <p>Payment method</p>
+                  <p><b>Manual</b></p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <p>Total</p>
+                  <p><b>$600.00</b></p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <p>Comment</p>
+                  <p><b>Payment</b></p>
+                </div>
+              </div>
+              <div class="account-items-list">
+                <div class="account-table-content">
+                  <div class="grid-container">
+                    <div class="table-responsive-md">
+                      <table class="table table-total">
+                        <caption>Order #7</caption>
+                        <thead>
+                          <tr>
+                            <th class="grid_head w-25"><span>Name</span></th>
+                            <th class="grid_head"><span>Price</span></th>
+                            <th class="grid_head"><span>Qty</span></th>
+                            <th class="grid_head"><span>Total</span></th>
+                            <th class="grid_head"><span>Commission</span></th>
+                            <th class="grid_head text-right"><span>Seller total</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                            <td>$600.00</td>
+                            <td>3</td>
+                            <td>$600.00</td>
+                            <td>$12.00</td>
+                            <td class="text-right">$600.00</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="5" class="empty"></td>
+                            <td colspan="1" class="text-right">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <span>Subtotal</span>
+                                  <span>$600.00</span>
+                                </li>
+                                <li>
+                                  <span>Tax</span>
+                                  <span>$0.00</span>
+                                </li>
+                                <li class="font-weight-bold">
+                                  <span>Grand Total</span>
+                                  <span>$600.00</span>
+                                </li>
+                                <li class="font-weight-bold">
+                                  <span>Total Paid</span>
+                                  <span>$600.00</span>
+                                </li>
+                                <li class="font-weight-bold">
+                                  <span>Total Refunded</span>
+                                  <span>$0.00</span>
+                                </li>
+                                <li class="font-weight-bold">
+                                  <span>Total Due</span>
+                                  <span>$0.00</span>
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

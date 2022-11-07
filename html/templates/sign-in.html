@@ -1,0 +1,59 @@
+{% set title = "Sign In" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-9 col-lg-6 box-section-wrapper">
+                <div class="box-section">
+                  <div class="box-section__head heading">
+                    <h3>Sign In</h3>
+                  </div>
+                  <div class="custom-form-container">
+                    <form action="home-in.html">
+                      <div class="form-group margin_b_20">
+                        <label for="email" class="mandatory label-style form-labels">Email or username</label>
+                        <input type="email" name="email" value="" placeholder="Email or username" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="password" class="mandatory label-style">Password</label>
+                        <input type="password" name="password" value="" placeholder="Password" class="form-control">
+                      </div>
+                      <div class="submit-container box-section__action">
+                        <input id="custom-submit-button" type="submit" value="Sign In" class="btn btn-primary">
+                        <a href="reset.html" class="custom-forgot-link">Forgot password?</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <p>New to 2AGunShow?</p>
+                  <a href="sign-up.html" class="btn btn-outline-primary">Create an account</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

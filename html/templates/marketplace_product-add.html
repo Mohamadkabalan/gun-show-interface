@@ -1,0 +1,51 @@
+{% set title = "Marketplace / Product Add" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <form action="/">
+                <div class="account-head">
+                  <h1 class="h3">Create new product</h1>
+                </div>
+                <div class="account-table-content">
+                  <!-- PRODUCT ADD SECTION -->
+                  <div class="form-group">
+                    <label>Search for products, if product exists then sell your with different price</label>
+                    <input class="form-control" type="text" placeholder="Find a product">
+                  </div>
+                  <div class="form-group form-action">
+                    <button type="submit" class="btn btn-primary">Or create a new product</button>
+                  </div>
+                  <!-- END PRODUCT ADD SECTION -->
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

@@ -1,0 +1,138 @@
+#category-menu-header {
+  background: url(../images/bg-header.png) 50% 0/cover no-repeat;
+
+  @media only screen and (min-width: 992px) {
+    border-top: 1px solid $color-gray-darker;
+    background-position: 50% -98px;
+    background-size: auto;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    background-size: 100% auto;
+  }
+
+  // become a seller link
+  .link {
+    display: none;
+    margin-right: 15px;
+    padding: 10px 15px;
+    font-weight: 700;
+    color: $color-primary;
+    transition: $transition;
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary;
+      color: $color-gray-darker;
+      text-decoration: none;
+    }
+
+    @media only screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+}
+
+.main-content-wrapper .main-category {
+  min-width: 25%;
+  display: none;
+  align-items: center;
+  padding: 8px 15px 8px 24px;
+  background: transparent;
+  color: $color-white;
+
+
+  @media only screen and (min-width: 992px) {
+    display: flex;
+  }
+}
+
+.category-list-container {
+  position: absolute;
+  z-index: 10;
+  background: $color-white;
+  box-shadow: 0 10px 20px $color-black-10, 0 6px 6px $color-black-30;
+
+  ul {
+    @include reset-list;
+  }
+
+  .category {
+    display: block;
+    padding: 5px 5px 5px 15px;
+    line-height: 2em;
+    color: $color-gray-darker;
+    transition: $transition;
+
+    &:hover {
+      background-color: $color-primary;
+      text-decoration: none;
+    }
+
+    span {
+      top: -4px;
+      position: relative;
+    }
+  }
+
+  .category-title {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}
+
+.main-category {
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  i {
+    margin-right: 9px;
+    font-size: 18px;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+// secondary navigation
+.main-content-wrapper .content-list {
+  &.right {
+    display: none;
+    flex: 1 auto;
+
+    @media only screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  ul {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5em;
+  
+    a {
+      display: block;
+      padding: 10px 15px;
+      font-weight: 700;
+      color: $color-gray-light;
+      transition: $transition;
+  
+      &:hover,
+      &:focus {
+        background-color: $color-white;
+        color: $color-gray-darker;
+        text-decoration: none;
+      }
+    }
+  }
+}

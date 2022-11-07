@@ -1,0 +1,45 @@
+<!-- HEADER TopBar -->
+<nav id="top" class="header-topbar">
+  <div class="row no-margin">
+    <div class="col-sm-6 ">
+      <div class="pull-left header-topbar__locale">
+        <div class="dropdown">
+          <div class="locale-icon">
+            <span class="icon american-english-icon"></span>
+          </div>
+          <select class="locale-switcher styled-select">
+            <option value="en" selected="selected">English</option>
+          </select>
+          <div class="select-icon-container">
+            <i class="select-icon language-arrow-icon fal fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 header-topbar__login">
+      {% if logged %}
+      <div class="dropdown float-right">
+        <div id="account">
+          <div class="welcome-content dropdown-toggle" id="profileMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fal fa-user-circle"></i>
+            <span class="title">Welcome, Guest!</span>
+            <span class="select-icon fal fa-angle-down"></span>
+          </div>
+          <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="profileMenuButton">
+            <a class="dropdown-item" href="user-account_profile.html">My Account</a>
+            <a class="dropdown-item" href="marketplace_profile.html">Marketplace</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="home-out.html">Sign Out</a>
+          </div>
+        </div>
+      </div>
+      {% else %}
+        <div class="action float-right">
+          <a href="sign-up.html" class="btn btn-link">Sign Up</a>
+          <a href="sign-in.html" class="btn btn-primary">Sign In</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</nav>
+<!-- END HEADER TopBar -->

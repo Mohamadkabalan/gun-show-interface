@@ -1,0 +1,185 @@
+{% set title = "Marketplace / Profile" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <form action="/">
+                <div class="account-head">
+                  <h1 class="h3">Marketplace profile</h1>
+                  <div class="account-action">
+                    <a href="#" class="btn btn-outline-primary">View collection page</a>
+                    <a href="#" class="btn btn-outline-primary">View seller page</a>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+                <div class="account-table-content">
+                  <!-- PROFILE LIST -->
+                  <div class="accordion list-group list-group-flush list-group-accordion" id="marketplace-profile-list">
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProfile1" aria-expanded="false" aria-controls="collapseProfile1"><span>Business information</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProfile1" class="collapse" data-parent="#marketplace-profile-list">
+                        <div class="inner">
+                          <div class="form-group">
+                            <label>Shop title</label>
+                            <input class="form-control" type="text" placeholder="Shop title">
+                          </div>
+                          <div class="form-group">
+                            <label>Shop url</label>
+                            <input class="form-control" type="text" placeholder="Shop url">
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12 col-md-6">
+                              <label>Tax/VAT number</label>
+                              <input class="form-control" type="text" placeholder="Tax/VAT number">
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <label>Contact number</label>
+                              <input class="form-control" type="text" placeholder="Contact number">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label>Address 1</label>
+                            <input class="form-control" type="text" placeholder="Address line 1">
+                          </div>
+                          <div class="form-group">
+                            <label>Address 2</label>
+                            <input class="form-control" type="text" placeholder="Address line 2">
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-12 col-md-4">
+                              <label>City</label>
+                              <input class="form-control" type="text" placeholder="City">
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>State</label>
+                              <select placeholder="Select state" class="form-control">
+                                <option value="State 1">State 1</option>
+                                <option value="State 2">State 2</option>
+                              </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <label>Zip/Postcode</label>
+                              <input class="form-control" type="text" placeholder="Zip/Postcode">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProfile2" aria-expanded="false" aria-controls="collapseProfile2"><span>Media</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProfile2" class="collapse" data-parent="#marketplace-profile-list">
+                        <div class="inner">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProfile3" aria-expanded="false" aria-controls="collapseProfile3"><span>About shop</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProfile3" class="collapse" data-parent="#marketplace-profile-list">
+                        <div class="inner">
+                          <textarea class="form-control"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProfile4" aria-expanded="false" aria-controls="collapseProfile4"><span>Social links</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProfile4" class="collapse" data-parent="#marketplace-profile-list">
+                        <div class="inner">
+                          <div class="form-group">
+                            <label>Twitter id</label>
+                            <input class="form-control" type="text" placeholder="Twitter id">
+                          </div>
+                          <div class="form-group">
+                            <label>Facebook id</label>
+                            <input class="form-control" type="text" placeholder="Facebook id">
+                          </div>
+                          <div class="form-group">
+                            <label>Youtube id</label>
+                            <input class="form-control" type="text" placeholder="Youtube id">
+                          </div>
+                          <div class="form-group">
+                            <label>Instagram id</label>
+                            <input class="form-control" type="text" placeholder="Instagram id">
+                          </div>
+                          <div class="form-group">
+                            <label>Skype id</label>
+                            <input class="form-control" type="text" placeholder="Skype id">
+                          </div>
+                          <div class="form-group">
+                            <label>Linkedin id</label>
+                            <input class="form-control" type="text" placeholder="Linkedin id">
+                          </div>
+                          <div class="form-group">
+                            <label>Pinterest id</label>
+                            <input class="form-control" type="text" placeholder="Pinterest id">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProfile5" aria-expanded="false" aria-controls="collapseProfile5"><span>Policies</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProfile5" class="collapse" data-parent="#marketplace-profile-list">
+                        <div class="inner">
+                          <div class="form-group">
+                            <label>Return policy</label>
+                            <textarea class="form-control"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label>Shipping policy</label>
+                            <textarea class="form-control"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label>Privacy policy</label>
+                            <textarea class="form-control"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap list-group-item">
+                      <a class="list-group-accordion-btn" href="#" data-toggle="collapse" data-target="#collapseProfile6" aria-expanded="false" aria-controls="collapseProfile6"><span>SEO</span> <i class="fal fa-angle-right"></i></a>
+                      <div id="collapseProfile6" class="collapse" data-parent="#marketplace-profile-list">
+                        <div class="inner">
+                          <div class="form-group">
+                            <label>Meta description</label>
+                            <input class="form-control" type="text" placeholder="Meta description">
+                          </div>
+                          <div class="form-group">
+                            <label>Meta keywords</label>
+                            <input class="form-control" type="text" placeholder="Meta keywords">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END PROFILE LIST -->
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

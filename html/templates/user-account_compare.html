@@ -1,0 +1,250 @@
+{% set title = "User Account / Compare" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <div class="account-head">
+                <h1 class="h3">Compare</h1>
+              </div>
+              <div class="compare-products__nav js-compare-slider-nav">
+                <a href="#" class="flex-prev">
+                  <i class="far fa-arrow-left"></i>
+                </a>
+                <a href="#" class="flex-next">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="compare-products">
+                <div class="compare-products__head">
+                  <span class="name">Product</span>
+                  <span class="image"></span>
+                  <span class="condition">Condition</span>
+                  <span class="price">Price</span>
+                  <span class="action"></span>
+                </div>
+                <div class="compare-products__inner flexslider js-compare-slider">
+                  <ul class="slides">
+                    <li>
+                      <div class="compare-products__list-item">
+                        <div class="name">
+                          <a href="#" class="h5">22 LR 10+1 Rounds 5 Barrel 2.2 Lbs. N</a>
+                        </div>
+                        <div class="image">
+                          <a href="#">
+                            <img src="../images/list-item-large.jpg" class="image-fluid">
+                          </a>
+                        </div>
+                        <div class="condition">
+                          <span class="badge badge-dark">New</span>
+                        </div>
+                        <div class="price">
+                          <h3>$4567.00</h3>
+                        </div>
+                        <div class="action">
+                          <a href="#" class="btn btn-outline-primary">
+                            <i class="far fa-cart-plus"></i>
+                            <span>Add To Cart</span>
+                          </a>
+                          <div class="links">
+                            <a href="#">
+                              <i class="far fa-heart"></i>
+                            </a>
+                            <a href="#">
+                              <i class="far fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="compare-products__list-item">
+                        <div class="name">
+                          <a href="#" class="h5">22 LR 10+1 Rounds 5 Barrel 2.2 Lbs. N</a>
+                        </div>
+                        <div class="image">
+                          <a href="#">
+                            <img src="../images/list-item-large.jpg" class="image-fluid">
+                          </a>
+                        </div>
+                        <div class="condition">
+                          <span class="badge badge-dark">New</span>
+                        </div>
+                        <div class="price">
+                          <h3>$4567.00</h3>
+                        </div>
+                        <div class="action">
+                          <a href="#" class="btn btn-outline-primary">
+                            <i class="far fa-cart-plus"></i>
+                            <span>Add To Cart</span>
+                          </a>
+                          <div class="links">
+                            <a href="#">
+                              <i class="far fa-heart"></i>
+                            </a>
+                            <a href="#">
+                              <i class="far fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="compare-products__list-item">
+                        <div class="name">
+                          <a href="#" class="h5">22 LR 10+1 Rounds 5 Barrel 2.2 Lbs. N</a>
+                        </div>
+                        <div class="image">
+                          <a href="#">
+                            <img src="../images/list-item-large.jpg" class="image-fluid">
+                          </a>
+                        </div>
+                        <div class="condition">
+                          <span class="badge badge-dark">New</span>
+                        </div>
+                        <div class="price">
+                          <h3>$4567.00</h3>
+                        </div>
+                        <div class="action">
+                          <a href="#" class="btn btn-outline-primary">
+                            <i class="far fa-cart-plus"></i>
+                            <span>Add To Cart</span>
+                          </a>
+                          <div class="links">
+                            <a href="#">
+                              <i class="far fa-heart"></i>
+                            </a>
+                            <a href="#">
+                              <i class="far fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="compare-products__list-item">
+                        <div class="name">
+                          <a href="#" class="h5">22 LR 10+1 Rounds 5 Barrel 2.2 Lbs. N</a>
+                        </div>
+                        <div class="image">
+                          <a href="#">
+                            <img src="../images/list-item-large.jpg" class="image-fluid">
+                          </a>
+                        </div>
+                        <div class="condition">
+                          <span class="badge badge-dark">New</span>
+                        </div>
+                        <div class="price">
+                          <h3>$4567.00</h3>
+                        </div>
+                        <div class="action">
+                          <a href="#" class="btn btn-outline-primary">
+                            <i class="far fa-cart-plus"></i>
+                            <span>Add To Cart</span>
+                          </a>
+                          <div class="links">
+                            <a href="#">
+                              <i class="far fa-heart"></i>
+                            </a>
+                            <a href="#">
+                              <i class="far fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="compare-products__list-item">
+                        <div class="name">
+                          <a href="#" class="h5">22 LR 10+1 Rounds 5 Barrel 2.2 Lbs. N</a>
+                        </div>
+                        <div class="image">
+                          <a href="#">
+                            <img src="../images/list-item-large.jpg" class="image-fluid">
+                          </a>
+                        </div>
+                        <div class="condition">
+                          <span class="badge badge-dark">New</span>
+                        </div>
+                        <div class="price">
+                          <h3>$4567.00</h3>
+                        </div>
+                        <div class="action">
+                          <a href="#" class="btn btn-outline-primary">
+                            <i class="far fa-cart-plus"></i>
+                            <span>Add To Cart</span>
+                          </a>
+                          <div class="links">
+                            <a href="#">
+                              <i class="far fa-heart"></i>
+                            </a>
+                            <a href="#">
+                              <i class="far fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="compare-products__list-item">
+                        <div class="name">
+                          <a href="#" class="h5">22 LR 10+1 Rounds 5 Barrel 2.2 Lbs. N</a>
+                        </div>
+                        <div class="image">
+                          <a href="#">
+                            <img src="../images/list-item-large.jpg" class="image-fluid">
+                          </a>
+                        </div>
+                        <div class="condition">
+                          <span class="badge badge-dark">New</span>
+                        </div>
+                        <div class="price">
+                          <h3>$4567.00</h3>
+                        </div>
+                        <div class="action">
+                          <a href="#" class="btn btn-outline-primary">
+                            <i class="far fa-cart-plus"></i>
+                            <span>Add To Cart</span>
+                          </a>
+                          <div class="links">
+                            <a href="#">
+                              <i class="far fa-heart"></i>
+                            </a>
+                            <a href="#">
+                              <i class="far fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

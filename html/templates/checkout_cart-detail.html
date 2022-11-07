@@ -1,0 +1,273 @@
+{% set title = "Checkout process / Cart detail" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="container">
+            <section class="cart-details">
+              <div class="cart-details__head">
+                <h1 class="h3"><i class="far fa-shopping-cart"></i> Shopping Cart</h1>
+                <div class="h3 total">Total: $999999.00</div>
+              </div>
+              <div>
+                <div class="cart-details__list">
+                  <div class="cart-details__list-head h3">From <span>Name of the seller one</span></div>
+                  <div class="cart-details__item">
+                    <form action="/">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2 col-xl-1 cart-details__item-image">
+                          <img src="../images/list-item.jpg" alt="Product image">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-5 col-xl-6">
+                          <h4><a href="#">22 LR 10+1 ROUNDS 5 BARREL 2.2 LBS. N</a></h4>
+                          <p><b>$700.00</b></p>
+                          <div class="action">
+                            <a href="#"><i class="far fa-heart"></i>Move to wishlist</a>
+                            <a href="#"><i class="far fa-trash-alt"></i>Remove</a>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                          <small>This item will ship to a local FFL Dealer for pickup. Estimated Delivery Date Range: May 10th - May 15th</small>
+                        </div>
+                        <div class="col-12 col-lg-3 price">
+                          <div class="input-group quantity">
+                            <div class="input-group-prepend">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-minus"></i>
+                              </button>
+                            </div>
+                            <input class="form-control" value="3">
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <b>$2100.00</b>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="cart-details__item">
+                    <form action="/">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2 col-xl-1 cart-details__item-image">
+                          <img src="../images/list-item.jpg" alt="Product image">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-5 col-xl-6">
+                          <h4><a href="#">Futaba Airsoft Ammo Sling For Gun Accessories</a></h4>
+                          <p><b>$150.00</b></p>
+                          <div class="action">
+                            <a href="#"><i class="far fa-heart"></i>Move to wishlist</a>
+                            <a href="#"><i class="far fa-trash-alt"></i>Remove</a>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-2"></div>
+                        <div class="col-12 col-lg-3 price">
+                          <div class="input-group quantity">
+                            <div class="input-group-prepend">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-minus"></i>
+                              </button>
+                            </div>
+                            <input class="form-control" value="1">
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <b>$150.00</b>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="cart-details__sum">
+                    <p><b>Subtotal with this seller: $2250.00</b></p>
+                    <a href="#" class="btn btn-primary">Proceed to checkout</a>
+                  </div>
+                </div>
+                <div class="cart-details__list">
+                  <div class="cart-details__list-head h3">From <span>Name of the seller two</span></div>
+                  <div class="cart-details__item">
+                    <form action="/">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2 col-xl-1 cart-details__item-image">
+                          <img src="../images/list-item.jpg" alt="Product image">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-5 col-xl-6">
+                          <h4><a href="#">Futaba Airsoft Ammo Sling For Gun Accessories</a></h4>
+                          <p><b>$999999.00</b></p>
+                          <div class="action">
+                            <a href="#"><i class="far fa-heart"></i>Move to wishlist</a>
+                            <a href="#"><i class="far fa-trash-alt"></i>Remove</a>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                          <small>This item will ship to a local FFL Dealer for pickup. Estimated Delivery Date Range: May 10th - May 15th</small>
+                        </div>
+                        <div class="col-12 col-lg-3 price">
+                          <div class="input-group quantity">
+                            <div class="input-group-prepend">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-minus"></i>
+                              </button>
+                            </div>
+                            <input class="form-control" value="1">
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <b>$999999.99</b>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="cart-details__item">
+                    <form action="/">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2 col-xl-1 cart-details__item-image">
+                          <img src="../images/list-item.jpg" alt="Product image">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-5 col-xl-6">
+                          <h4><a href="#">Futaba Airsoft Ammo Sling For Gun Accessories</a></h4>
+                          <p><b>$999999.00</b></p>
+                          <div class="action">
+                            <a href="#"><i class="far fa-heart"></i>Move to wishlist</a>
+                            <a href="#"><i class="far fa-trash-alt"></i>Remove</a>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                          <small>This item will ship to a local FFL Dealer for pickup. Estimated Delivery Date Range: May 10th - May 15th</small>
+                        </div>
+                        <div class="col-12 col-lg-3 price">
+                          <div class="input-group quantity">
+                            <div class="input-group-prepend">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-minus"></i>
+                              </button>
+                            </div>
+                            <input class="form-control" value="1">
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <b>$999999.99</b>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="cart-details__sum">
+                    <p><b>Subtotal with this seller: $999999.99</b></p>
+                    <a href="#" class="btn btn-primary">Proceed to checkout</a>
+                  </div>
+                </div>
+                <div class="cart-details__list">
+                  <div class="cart-details__list-head h3">From <span>Name of the seller two</span></div>
+                  <div class="cart-details__item">
+                    <form action="/">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2 col-xl-1 cart-details__item-image">
+                          <img src="../images/list-item.jpg" alt="Product image">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-5 col-xl-6">
+                          <h4><a href="#">Futaba Airsoft Ammo Sling For Gun Accessories</a></h4>
+                          <p><b>$999999.00</b></p>
+                          <div class="action">
+                            <a href="#"><i class="far fa-heart"></i>Move to wishlist</a>
+                            <a href="#"><i class="far fa-trash-alt"></i>Remove</a>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                          <small>This item will ship to a local FFL Dealer for pickup. Estimated Delivery Date Range: May 10th - May 15th</small>
+                        </div>
+                        <div class="col-12 col-lg-3 price">
+                          <div class="input-group quantity">
+                            <div class="input-group-prepend">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-minus"></i>
+                              </button>
+                            </div>
+                            <input class="form-control" value="1">
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <b>$999999.99</b>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="cart-details__item">
+                    <form action="/">
+                      <div class="row">
+                        <div class="col-12 col-md-3 col-lg-2 col-xl-1 cart-details__item-image">
+                          <img src="../images/list-item.jpg" alt="Product image">
+                        </div>
+                        <div class="col-12 col-md-9 col-lg-5 col-xl-6">
+                          <h4><a href="#">Futaba Airsoft Ammo Sling For Gun Accessories</a></h4>
+                          <p><b>$999999.00</b></p>
+                          <div class="action">
+                            <a href="#"><i class="far fa-heart"></i>Move to wishlist</a>
+                            <a href="#"><i class="far fa-trash-alt"></i>Remove</a>
+                          </div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                          <small>This item will ship to a local FFL Dealer for pickup. Estimated Delivery Date Range: May 10th - May 15th</small>
+                        </div>
+                        <div class="col-12 col-lg-3 price">
+                          <div class="input-group quantity">
+                            <div class="input-group-prepend">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-minus"></i>
+                              </button>
+                            </div>
+                            <input class="form-control" value="1">
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-outline-light">
+                                <i class="fal fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <b>$999999.99</b>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="cart-details__sum">
+                    <p><b>Subtotal with this seller: $999999.99</b></p>
+                    <a href="#" class="btn btn-primary">Proceed to checkout</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!-- SHOWS LIST SECTION -->
+<div class="shows-list shows-list--promoter">
+  <div class="container">
+    <div class="shows-list__head">
+      <h3>Upcoming shows from this promoter</h3>
+    </div>
+    <div class="shows-list__items row">
+      {% for i in 1..6 %}
+        <div class="shows-list__item col-12 col-md-6 col-lg-4">
+          {% include 'shows-item.html' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- END SHOWS LIST SECTION -->

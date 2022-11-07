@@ -1,0 +1,26 @@
+<!-- PRODUCT LIST SECTION -->
+<div class="product-list">
+  <div class="container">
+    <div class="row">
+      <div class="col product-list__head">
+        <h2 class="h1">Featured listing</h2>
+        <div class="action">
+          <select name="select" class="form-control">
+            <option value="0">All categories</option>
+            <option value="1">Category 1</option>
+            <option value="2">Category 2</option>
+          </select>
+          <a href="buy.html" class="btn btn-primary">See all</a>
+        </div>
+      </div>
+    </div>
+    <div class="product-list__items">
+      {% for i in 1..10 %}
+        <div class="product-list__item">
+          {% include './product-item.html' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- END PRODUCT LIST SECTION -->

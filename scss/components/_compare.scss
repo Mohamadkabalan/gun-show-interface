@@ -1,0 +1,176 @@
+// compare products block
+.compare-products {
+  display: flex;
+  margin-right: -15px;
+
+  @media only screen and (min-width: 992px) {
+    margin-right: -40px;
+  }
+
+  &__nav {
+    position: relative;
+
+    a {
+      position: absolute;
+      top: 150px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 44px;
+      box-shadow: $box-shadow-think;
+      background-color: $color-white;
+      color: inherit;
+      cursor: pointer;
+
+      &.flex-prev {
+        left: -10px;
+
+        @media only screen and (min-width: 992px) {
+          left: 137px;
+        }
+      }
+
+      &.flex-next {
+        right: -10px;
+
+        @media only screen and (min-width: 992px) {
+          right: 101px;
+        }
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__head {
+    display: none;
+    flex: 0 0 150px;
+    max-width: 150px;
+    border-right: 1px solid $color-gray-light;
+    font-weight: 700;
+
+    @media only screen and (min-width: 992px) {
+      display: block;
+    }
+
+    span {
+      display: block;
+    }
+
+    .name {
+      height: 36px;
+      margin-top: 17px;
+      margin-bottom: 21px;
+    }
+
+    .image {
+      height: 215px;
+      margin-bottom: 35px;
+    }
+
+    .condition {
+      height: 24px;
+      margin-bottom: 25px;
+    }
+
+    .price {
+      height: 30px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex: 1 auto;
+    overflow-y: auto;
+  }
+
+  &__list-item {
+    width: 291px;
+    border-right: 1px solid $color-gray-light;
+    padding: 17px 38px 11px;
+    text-align: center;
+
+    .name {
+      height: 36px;
+      margin-bottom: 21px;
+    }
+
+    .image {
+      height: 215px;
+      margin-bottom: 35px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .condition {
+      height: 24px;
+      margin-bottom: 25px;
+    }
+
+    .price {
+      height: 30px;
+      margin-bottom: 28px;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+  h3 {
+    margin: 0;
+    font-family: inherit;
+  }
+
+  .h5 {
+    display: inline-block;
+    margin: 0;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.2em;
+    text-align: left;
+  }
+
+  img {
+    width: 100%;
+    border-radius: $border-radius;
+  }
+
+  .btn {
+    margin-bottom: 21px;
+    width: 100%;
+    justify-content: center;
+
+    i {
+      font-size: inherit;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      transition: $transition;
+
+      &:hover,
+      &:focus {
+        color: $color-info-dark;
+      }
+    }
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}

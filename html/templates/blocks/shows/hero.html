@@ -1,0 +1,16 @@
+{% set hero_bg_image = hero_bg_image|default("./images/...jpg") %}
+{% set hero_title = hero_title|default("Hero section title") %}
+{% set hero_label = hero_label|default(false) %}
+
+<!-- HERO SECTION -->
+<div class="hero-section" style="background-image: url({{ hero_bg_image }});">
+  <div class="container">
+    <a href="#" class="hero-section__link"><i class="fal fa-angle-left"></i>Back to all gun shows</a>
+    <h1 class="h1 hero-section__title">{{ hero_title }}</h1>
+    {% if hero_label %}
+    <span class="hero-section__label"><i class="far fa-badge-check"></i> Verified</span>
+    {% endif %}
+    </div>
+  </div>
+</div>
+<!-- END HERO SECTION -->

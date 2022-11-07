@@ -1,0 +1,92 @@
+{% set title = "User account / Address edit" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <form action="user-account_addresses.html">
+                <div class="account-head">
+                  <h1 class="h3">Add address</h1>
+                </div>
+                <div class="account-table-content">
+                  <div class="form-group row">
+                    <div class="col-12 col-md-6">
+                      <label>First name</label>
+                      <input class="form-control" type="text" placeholder="First name">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label>Last name</label>
+                      <input class="form-control" type="text" placeholder="Last name">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-12 col-md-6">
+                      <label>Vat id</label>
+                      <input class="form-control" type="text" placeholder="Use Country Code with VAT Id. Eg. INV01234567891]">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Street address</label>
+                    <input class="form-control" type="text" placeholder="Street address">
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-12 col-md-4">
+                      <label>City</label>
+                      <input class="form-control" type="text" placeholder="City">
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <label>State</label>
+                      <select placeholder="Select state" class="form-control">
+                        <option value="State 1">State 1</option>
+                        <option value="State 2">State 2</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <label>Zip/Postcode</label>
+                      <input class="form-control" type="text" placeholder="Zip/Postcode">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-12 col-md-6">
+                      <label>Email</label>
+                      <input class="form-control" type="email" placeholder="Email">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label>Phone</label>
+                      <input class="form-control" type="text" placeholder="Phone">
+                    </div>
+                  </div>
+                  <div class="form-action">
+                    <button type="submit" class="btn btn-primary">Add address</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

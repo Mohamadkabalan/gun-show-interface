@@ -1,0 +1,55 @@
+{% set title = "Shows / Promoter detail" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+          
+          {% include './blocks/shows/hero.html' with {
+            hero_bg_image: '../images/hero.jpg',
+            hero_title: 'Madisonville Noon Lions Club',
+          } %}
+
+          <div class="shows-detail">
+            <div class="container">
+              <div class="shows-detail__info">
+                <i class="fal fa-exclamation-triangle"></i>
+                <p>Due to the COVID-19 out break we are encouraging all of our users to verify that the gun shows listed in this site have not been cancelled by contacting the promoter directly.</p>
+              </div>
+              <div class="row pt-md-2">
+                <div class="col-12 col-md-8">
+                  <p>The Madisonville Noon Lion's Club Gun & Hunting Show will be held on Aug 15 - Aug 16, 2020 in Madisonville, TX. This Madisonville gun show is held at Truman Kimbro Center and hosted by PROMOTER. All federal, state and local firearm ordinances and laws must be obeyed.</p>
+                </div>
+                <div class="col-12 col-md-4 shows-detail__description-item">
+                  <i class="fal fa-user"></i>
+                  <h5>Contact</h5>
+                  <p>John Doe <br> john.doe@promoter.com <br> +1 123 456 7890</p>
+                </div>
+              </div>
+            </div>
+
+            {% include './blocks/shows/upcoming-list.html' %}
+          </div>
+
+          {% include './blocks/home/subscribe.html' %}
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

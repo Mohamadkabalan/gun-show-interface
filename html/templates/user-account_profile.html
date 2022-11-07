@@ -1,0 +1,60 @@
+{% set title = "User Account / Profile" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <div class="account-head">
+                <h1 class="h3">Account profile</h1>
+              </div>
+              <div class="row stats stats--profile">
+                <div class="col-6 col-lg-3">
+                  <p>First name</p>
+                  <p><b>Gregory</b></p>
+                </div>
+                <div class="col-6 col-lg-9">
+                  <p>Last name</p>
+                  <p><b>Tanacea</b></p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <p>Gender</p>
+                  <p><b>Male</b></p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <p>Date of birth</p>
+                  <p><b>08 October 1980</b></p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <p>Email</p>
+                  <p><b>greg@devvly.com</b></p>
+                </div>
+              </div>
+              <a href="user-account_profile-edit.html" class="btn btn-outline-primary"><i class="far fa-pencil"></i><span>Edit</span></a>
+            </div>
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

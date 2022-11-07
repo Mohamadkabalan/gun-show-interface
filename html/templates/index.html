@@ -1,0 +1,81 @@
+{% set title = "2AGS" %}
+
+{%
+ set pages = [
+    { 'index': '', 'link': '#', 'title': 'Home pages', 'group': true },
+    { 'index': '1', 'link': 'home-out.html', 'title': 'Home page / Out' },
+    { 'index': '2', 'link': 'home-in.html', 'title': 'Home page / In' },
+    { 'index': '', 'link': '#', 'title': 'Buy pages', 'group': true },
+    { 'index': '3', 'link': 'buy.html', 'title': 'Buy page' },
+    { 'index': '4', 'link': 'buy_product-detail.html', 'title': 'Buy / Product detail' },
+    { 'index': '5', 'link': 'buy_seller-store.html', 'title': 'Buy / Seller Store' },
+    { 'index': '6', 'link': 'buy_category.html', 'title': 'Buy / Category' },
+    { 'index': '', 'link': '#', 'title': 'Sign In/Out pages', 'group': true },
+    { 'index': '7', 'link': 'sign-in.html', 'title': 'Sign In' },
+    { 'index': '8', 'link': 'sign-up.html', 'title': 'Sign Up' },
+    { 'index': '9', 'link': 'reset.html', 'title': 'Password recovery' },
+    { 'index': '10', 'link': 'reset-confirm.html', 'title': 'Password recovery - confirmation' },
+    { 'index': '', 'link': '#', 'title': '404 page', 'group': true },
+    { 'index': '11', 'link': '404.html', 'title': '404 page' },
+    { 'index': '', 'link': '#', 'title': 'Sell', 'group': true },
+    { 'index': '12', 'link': 'sell_home.html', 'title': 'Sell / Homepage' },
+    { 'index': '13', 'link': 'sell_become.html', 'title': 'Sell / Became a seller' },
+    { 'index': '', 'link': '#', 'title': 'Marketplace pages', 'group': true },
+    { 'index': '14', 'link': 'marketplace_profile.html', 'title': 'Marketplace / Profile' },
+    { 'index': '15', 'link': 'marketplace_product-add.html', 'title': 'Marketplace / Product Add' },
+    { 'index': '16', 'link': 'marketplace_product-edit.html', 'title': 'Marketplace / Product Edit' },
+    { 'index': '17', 'link': 'marketplace_products.html', 'title': 'Marketplace / Products List' },
+    { 'index': '18', 'link': 'marketplace_orders.html', 'title': 'Marketplace / Orders' },
+    { 'index': '19', 'link': 'marketplace_transactions.html', 'title': 'Marketplace / Transactions' },
+    { 'index': '20', 'link': 'marketplace_transactions-detail.html', 'title': 'Marketplace / Transactions Detail' },
+    { 'index': '21', 'link': 'marketplace_reviews.html', 'title': 'Marketplace / Reviews' },
+    { 'index': '22', 'link': 'marketplace_dashboard.html', 'title': 'Marketplace / Dashboard' },
+    { 'index': '', 'link': '#', 'title': 'User account pages', 'group': true },
+    { 'index': '23', 'link': 'user-account_profile.html', 'title': 'User account / Profile' },
+    { 'index': '24', 'link': 'user-account_profile-edit.html', 'title': 'User account / Profile Edit' },
+    { 'index': '25', 'link': 'user-account_orders.html', 'title': 'User account / Orders' },
+    { 'index': '26', 'link': 'user-account_orders-detail.html', 'title': 'User account / Order Detail' },
+    { 'index': '27', 'link': 'user-account_downloadable-products.html', 'title': 'User account / Downloadable products' },
+    { 'index': '28', 'link': 'user-account_wishlist.html', 'title': 'User account / Wishlist' },
+    { 'index': '29', 'link': 'user-account_compare.html', 'title': 'User account / Compare' },
+    { 'index': '30', 'link': 'user-account_reviews.html', 'title': 'User account / Reviews' },
+    { 'index': '31', 'link': 'user-account_addresses.html', 'title': 'User account / Addresses' },
+    { 'index': '32', 'link': 'user-account_address-edit.html', 'title': 'User account / Address edit' },
+    { 'index': '', 'link': '#', 'title': 'Checkout pages', 'group': true },
+    { 'index': '33', 'link': 'checkout_cart-detail.html', 'title': 'Checkout process / Cart detail' },
+    { 'index': '34', 'link': 'checkout_confirmation.html', 'title': 'Checkout process / Confirmation' },
+    { 'index': '35', 'link': 'checkout_sequence.html', 'title': 'Checkout process / Checkout sequence' },
+    { 'index': '', 'link': '#', 'title': 'Shows pages', 'group': true },
+    { 'index': '36', 'link': 'shows_browse.html', 'title': 'Shows / Browse shows' },
+    { 'index': '37', 'link': 'shows_detail.html', 'title': 'Shows / Gun show detail' },
+    { 'index': '38', 'link': 'shows_promoter.html', 'title': 'Shows / Promoter detail' },
+  ]
+%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {% include './blocks/stylesheets.html' %}
+  </head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+        <h1 class="text-primary mt-5">List of the pages</h1>
+        <div class="list-group my-5">
+          {% for item in pages %}
+            {% if item.group %}
+              <span class="list-group-item list-group-item-action active" href="{{ item.link }}">{{ item.title }}</span>
+            {% else %}
+              <a class="list-group-item list-group-item-action" href="{{ item.link }}" target="_blank"><b>{{ item.index }}.</b> {{ item.title }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

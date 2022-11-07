@@ -1,0 +1,96 @@
+{% set title = "Home page" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="promo-grid">
+            <div class="promo-grid__item promo-grid__item--small-top">
+              {% include './blocks/home/promo.html' with {
+                promo_bg_image: '../images/bg-promo-section-1.jpg',
+                promo_title: 'Join the community',
+                promo_link: 'It’s free!'
+              } only %}
+            </div>
+            <div class="promo-grid__item promo-grid__item--small-bottom">
+              {% include './blocks/home/promo.html' with {
+                promo_bg_image: '../images/bg-promo-section-2.jpg',
+                promo_title: 'Go to guns shows',
+                promo_link: 'Find Gun shows!'
+              } only %}
+            </div>
+            <div class="promo-grid__item promo-grid__item--large">
+              {% include './blocks/home/promo.html' with {
+                promo_bg_image: '../images/bg-promo-section-3.jpg',
+                promo_title: 'Start selling <br> on 2a gun show',
+                promo_link: 'Learn more'
+              } only %}
+            </div>
+          </div>
+          
+          {% include './blocks/home/product-list.html' %}
+
+          <div class="promo-marketing">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-lg-6 promo-marketing__info">
+                  <div class="promo-marketing__head">
+                    <h2>What Makes 2AGunShow Different?</h2>
+                    <strong class="h1">EVERYTHING.</strong>
+                  </div>
+                  <a href="#" class="btn btn-outline-primary">Learn more</a>
+                </div>
+                <div class="col-12 col-lg-6 promo-marketing__media">
+                  <iframe src="https://www.youtube.com/embed/880gIla_iow" frameborder="0" allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% include './blocks/home/product-slider.html' %}
+
+          <div class="inform-section">
+            <div class="container text-center">
+              <h2 class="filled bg-primary inform-section__head">how 2a gun show works</h2>
+            </div>
+          </div>
+
+          {% include './blocks/home/promo.html' with {
+            promo_bg_image: '../images/bg-promo-section-4.jpg',
+            promo_title: 'Another place to click',
+            promo_link: 'Shop now!',
+            promo_specific: true,
+            promo_revert: true
+          } only %}
+
+          {% include './blocks/home/promo.html' with {
+            promo_bg_image: '../images/bg-promo-section-5.jpg',
+            promo_title: 'Another place to click',
+            promo_link: 'Shop now!',
+            promo_specific: true
+          } only %}
+
+          {% include './blocks/home/subscribe.html' %}
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

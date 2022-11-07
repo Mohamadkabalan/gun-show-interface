@@ -1,0 +1,22 @@
+<!-- PRODUCT LIST SECTION -->
+<div class="product-list">
+  <div class="container">
+    <div class="row">
+      <div class="col product-list__head">
+        <h2 class="h1">Popular products</h2>
+        <div class="action">
+          <b>24 products</b>
+          <a href="#" class="btn btn-primary">See all</a>
+        </div>
+      </div>
+    </div>
+    <div class="product-list__items">
+      {% for i in 1..10 %}
+        <div class="product-list__item">
+          {% include '../home/product-item.html' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- END PRODUCT LIST SECTION -->

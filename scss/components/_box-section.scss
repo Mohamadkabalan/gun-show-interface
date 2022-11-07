@@ -1,0 +1,63 @@
+.box-section {
+  max-width: 528px;
+  margin: 70px auto 30px;
+  border-radius: .25rem;
+  padding: 25px 21px 34px;
+  box-shadow: $box-shadow;
+  background-color: $color-white;
+
+  &-wrapper {
+    margin-bottom: 170px;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__head {
+    margin-bottom: 19px;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.image-box {
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: 50% 0; */
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  &__rifles {
+    background-image: url(../images/image-box-rifles.jpg);
+  }
+  &__handguns {
+    background-image: url(../images/image-box-handguns.jpg);
+  }
+  &__ammo {
+    background-image: url(../images/image-box-ammo.jpg);
+  }
+  &__clothing {
+    background-image: url(../images/image-box-clothing.jpg);
+  }
+  &__collectibles {
+    background-image: url(../images/image-box-collectibles.jpg);
+  }
+  &__trainings {
+    background-image: url(../images/image-box-trainings.jpg);
+  }
+}
+a .image-box {
+  box-shadow: 0 0 0 5px transparent inset;
+}
+a:hover .image-box {
+  box-shadow: 0 0 0 5px rgba($color-primary, 0.8) inset;
+}

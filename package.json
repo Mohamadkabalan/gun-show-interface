@@ -1,0 +1,29 @@
+{
+  "name": "2AGun",
+  "version": "1.0.0",
+  "description": "2AGunShow.com",
+  "main": "gulpfile.js",
+  "author": "Devvly",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp-plumber": "^1.2.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.12.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-concat": "^2.6.1",
+    "gulp-watch": "^4.3.11",
+    "gulp-notify": "^2.2.0",
+    "del": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "material-components-web": "^2.3.0",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-twig": "^1.2.0",
+    "gulp.spritesmith": "^6.11.0",
+    "bootstrap": "^4.5.2"
+  }
+}

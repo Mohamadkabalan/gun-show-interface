@@ -1,0 +1,93 @@
+{% set title = "User account / Addresses" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <div class="account-head">
+                <h1 class="h3">Addresses</h1>
+                <div class="account-action">
+                  <a href="user-account_address-edit.html" class="btn btn-outline-gray"><i class="far fa-map-marker-alt"></i><span>Add address</span></a>
+                </div>
+              </div>
+              <div class="account-table-content">
+                <div class="address-holder row">
+                  <div class="col-12 col-md-6 col-lg-4 col-">
+                    <div class="card card--address">
+                      <div class="card-body">
+                        <h5 class="card-title">Gregory Tanacea</h5>
+                        <p>6500 400th ave, Burlington, WI 53105, 563-580-4493</p>
+                        <a href="user-account_address-edit.html" class="card-link">
+                          <i class="far fa-edit"></i>
+                          <span>Edit</span>
+                        </a>
+                        <a href="#" class="card-link">
+                          <i class="far fa-trash-alt"></i>
+                          <span>Delete</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 col-">
+                    <div class="card card--address">
+                      <div class="card-body">
+                        <h5 class="card-title">Gregory Tanacea</h5>
+                        <p>6500 400th ave, Burlington, WI 53105, 563-580-4493</p>
+                        <a href="user-account_address-edit.html" class="card-link">
+                          <i class="far fa-edit"></i>
+                          <span>Edit</span>
+                        </a>
+                        <a href="#" class="card-link">
+                          <i class="far fa-trash-alt"></i>
+                          <span>Delete</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 col-">
+                    <div class="card card--address">
+                      <div class="card-body">
+                        <h5 class="card-title">Gregory Tanacea</h5>
+                        <p>6500 400th ave, Burlington, WI 53105, 563-580-4493</p>
+                        <a href="user-account_address-edit.html" class="card-link">
+                          <i class="far fa-edit"></i>
+                          <span>Edit</span>
+                        </a>
+                        <a href="#" class="card-link">
+                          <i class="far fa-trash-alt"></i>
+                          <span>Delete</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

@@ -1,0 +1,117 @@
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 400;
+  color: $body-color;
+  line-height: $base-line-height;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h4 {
+  font-family: $font-secondary;
+
+  &.filled {
+    display: inline-block;
+    margin: 0;
+    padding: .5rem 1rem;
+
+    @media only screen and (min-width: 992px) {
+      padding: 1rem 1.4rem;
+    }
+  }
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size * .75;
+  font-weight: 700;
+
+  @media only screen and (min-width: 992px) {
+    font-size: $h1-font-size;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size * .75;
+  font-weight: 700;
+
+  @media only screen and (min-width: 992px) {
+    font-size: $h2-font-size;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size;
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-size: $h4-font-size;
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  font-size: $h5-font-size;
+}
+
+small {
+  font-size: $base-font-size * .75; // 12px
+}
+
+// primary logo
+.brand-logo {
+  display: inline-block;
+  background: url(../images/gunshow-logo-small.svg) 0 0/100% auto no-repeat;
+  width: 115px;
+  height: 23px;
+
+  @media only screen and (min-width: 992px) {
+    width: 147px;
+    height: 30px;
+  }
+
+  &--white {
+    width: 124px;
+    height: 25px;
+    background: url(../images/gunshow-logo-white.svg) 0 0/100% auto no-repeat;
+  }
+}
+
+// overwrite bootstrap container
+@media only screen and (min-width: 1230px) {
+  .container {
+    max-width: 1230px;
+  }
+}
+
+// main wrapper for the page content
+.main-content-wrapper {
+  padding-top: 61px; // space for the fixed header
+
+  @media only screen and (min-width: 992px) {
+    padding-top: 0;
+  }
+}
+
+// link
+a {
+  color: $color-info-dark;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $color-info;
+    text-decoration: none;
+  }
+}

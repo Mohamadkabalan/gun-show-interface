@@ -1,0 +1,50 @@
+{% set title = "User account / Wishlist" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <div class="account-head">
+                <h1 class="h3">Wishlist</h1>
+                <div class="account-action">
+                  <a href="#" class="btn btn-outline-gray"><i class="far fa-trash-alt"></i><span>Delete all</span></a>
+                </div>
+              </div>
+              <div class="account-table-content">
+                <div class="product-list__items">
+                  {% for i in 1..3 %}
+                    <div class="product-list__item">
+                      {% include './blocks/home/product-item.html' %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

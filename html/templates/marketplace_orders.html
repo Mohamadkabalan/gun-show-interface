@@ -1,0 +1,295 @@
+{% set title = "Marketplace / Orders" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="account-content">
+            {% include './blocks/marketplace/sidebar.html' %}
+            
+            <div class="account-layout">
+              <div class="account-head">
+                <h1 class="h3">Orders</h1>
+              </div>
+              <div class="account-items-list">
+                <div class="account-table-content">
+                  <div class="grid-container">
+                    <div class="filter-row-one">
+                      <div class="row align-items-end">
+                        <div class="col-md-4 col-xl-2">
+                          <div class="form-group">
+                            <input type="search" placeholder="Search" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-xl-8">
+                          <div class="row align-items-end">
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label>Filter</label>
+                                <select class="form-control" placeholder="Select column">
+                                  <option value="Column 1">Column 1</option>
+                                  <option value="Column 2">Column 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <select class="form-control" placeholder="Select condition">
+                                  <option value="Condition 1">Condition 1</option>
+                                  <option value="Condition 2">Condition 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <input type="text" placeholder="Value here..." class="form-control">
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="form-group">
+                                <a href="#" class="btn btn-outline-gray">Apply</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xl-2">
+                          <div class="form-group">
+                            <label>Items Per Page</label>
+                            <select class="form-control">
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="30">30</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive-md">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class="grid_head asc"><span>Id</span></th>
+                            <th class="grid_head"><span>Base total</span></th>
+                            <th class="grid_head"><span>Grand total</span></th>
+                            <th class="grid_head"><span>Order date</span></th>
+                            <th class="grid_head"><span>Status</span></th>
+                            <th class="grid_head"><span>Billed to</span></th>
+                            <th class="grid_head actions">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-success">Completed</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-success">Completed</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-warning">Pending</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-warning">Pending</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-warning">Pending</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-info">Processing</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-info">Processing</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-info">Processing</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-warning">Pending</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>31</td>
+                            <td>$600.00</td>
+                            <td>$600.00</td>
+                            <td>2020-02-26 09:48:18</td>
+                            <td>
+                              <span class="badge badge-warning">Pending</span>
+                            </td>
+                            <td>Lorem ipsum</td>
+                            <td class="actions">
+                              <div class="action">
+                                <a href="#">
+                                  <i class="far fa-eye"></i>
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="pagination">
+                    <a class="page-item previous">
+                      <i class="far fa-angle-left"></i>
+                    </a>
+                    <a href="#" class="page-item">1</a>
+                    <a href="#" class="page-item">2</a>
+                    <a href="#" class="page-item">3</a>
+                    <a class="page-item active">4</a>
+                    <a href="#" class="page-item">5</a>
+                    <a href="#" class="page-item">6</a>
+                    <a href="#" class="page-item">7</a>
+                    <a href="#" class="page-item next">
+                      <i class="far fa-angle-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{% set title = "Password recovery" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-9 col-lg-6 box-section-wrapper">
+                <div class="box-section">
+                  <div class="text-center">
+                    <div class="mb-4">
+                      <p>If an account exists for <br> pabloaccorinti@gmail.com, you will get an email with instructions on resetting your password. If it doesn't arrive, be sure to check your spam folder.</p>
+                    </div>
+                    <a href="sign-in.html">Back to Sign In</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

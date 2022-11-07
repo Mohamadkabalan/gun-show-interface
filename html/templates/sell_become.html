@@ -1,0 +1,42 @@
+{% set title = "Sell / Become a seller" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content=""/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include './blocks/stylesheets.html' %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container-wrapper">
+        {% include './blocks/header.html' with { logged: true } %}
+
+        <div class="main-content-wrapper">
+          {% include './blocks/header_category.html' %}
+
+          <div class="promo-section promo-section--low" style="background-image: url(../images/bg-promo-become-a-seller.jpg);">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h1 class="promo-section__title">Become a seller!</h1>
+                  <p class="head">Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% include './blocks/sell/types.html' %}
+
+          {% include './blocks/home/subscribe.html' %}
+        </div>
+
+        {% include './blocks/footer.html' %}
+      </div>
+    </div>
+  
+    {% include './blocks/scripts.html' %}
+  </body>
+</html>

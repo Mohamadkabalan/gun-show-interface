@@ -1,0 +1,61 @@
+<!-- CHECKOUT PROCESS STEP PAYMENT -->
+<div class="checkout__form-payment">
+  <div id="payment-section" class="step-content">
+    <div class="form-container">
+      <div class="accordian active">
+        <div class="accordian-header" data-toggle="collapse" data-target=".accordian-content-3" aria-expanded="false">
+          <div class="form-header">
+            <h3>Payment information</h3>
+          </div>
+          <i class="far fa-angle-right"></i>
+        </div>
+        <div class="accordian-content accordian-content-3 collapse" data-parent="#checkout-form">
+          <div class="payment-methods">
+            <div class="payment-method">
+              <div class="radio-input-container">
+                <div class="radio-button form-group form-check">
+                  <div class="radio-button__input">
+                    <input type="radio" name="payment-method" id="payment-method-1" checked="checked">
+                    <label for="payment-method-1" class="form-check-label">Credit card</label>
+                  </div>
+                </div>
+              </div>
+              <div id="card-payment-section" class="bordered card-payment">
+                <div class="radio-input-container">
+                  <div class="radio-button form-group form-check">
+                    <div class="radio-button__input">
+                      <input type="radio" name="payment-card" id="payment-card-1" checked="checked">
+                      <label for="payment-card-1" class="form-check-label">************1234</label>
+                    </div>
+                  </div>
+                </div>
+                <button data-toggle="modal" data-target="#newCardPopup" id="add-credit-card" class="btn btn-outline-dark btn-sm">Add a new card</button>
+              </div>
+            </div>
+            <div class="payment-method">
+              <div class="radio-input-container">
+                <div class="radio-button form-group form-check">
+                  <div class="radio-button__input">
+                    <input type="radio" name="payment-method" id="payment-method-2">
+                    <label for="payment-method-2" class="form-check-label">Marketplace Authorize Net</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment-method">
+              <div class="radio-input-container">
+                <div class="radio-button form-group form-check">
+                  <div class="radio-button__input">
+                    <input type="radio" name="payment-method" id="payment-method-3">
+                    <label for="payment-method-3" class="form-check-label">Braintree</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END CHECKOUT PROCESS STEP PAYMENT -->
